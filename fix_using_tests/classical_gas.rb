@@ -1,3 +1,5 @@
+require 'pry'
+
 class GasStation
 
   # Remember which methods this "magic command", "attr_reader" creates.
@@ -11,7 +13,23 @@ class GasStation
     @unleaded_price = unleaded_price
   end
 
+  def brand
+    @brand
+  end
+
+  def unleaded_price
+    @unleaded_price
+  end
+
+  def brand=(name)
+    @brand = name
+  end
+
+  def unleaded_price=(price)
+    @unleaded_price = price
+  end
 end
+
 
 petrol_petes = GasStation.new("Petrol Pete's", 50)
 seashore_shell = GasStation.new("The Seashore Shell", 40)
